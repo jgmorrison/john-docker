@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h3>Hello</h3>
+
+<p>Get Number</p>
+<p id="demo"></p>
+<button type="button" onclick="doGet()">Submit</button>
+
+
+<script>
+ 
+function doGet() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "http://localhost/getnumber");
+  xhttp.send();
+}
+
+</script>
+</body>
+</html>
